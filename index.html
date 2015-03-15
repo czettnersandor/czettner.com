@@ -1,0 +1,42 @@
+---
+layout: home
+---
+<div class="home-hero-content">
+  <div class="wrapper">
+    <div class="home-hero">
+      <header class="hero-header">
+        <h1 class="hero-title"><span>Senior PHP,</span> <span>Magento,</span> <span>Drupal</span> <span>developer,</span> <span>frontend</span> <span>enthusiast</span></h1>
+      </header>
+
+      <article class="post-content">
+        My name is Sandor Czettner and I'm a professional web developer, husband, father of two from Hungary, working in the scenic Scotland. Having an inspiring daily job, I'm turning bananas into quality software. On my spare time I'm flying Scotland's many hills with a 3rd Reich coloured (red-white-black) paraglider. Have a look around my site or browse my contributions on GitHub!
+      </article>
+
+      <div class="wraths">
+        <a href="https://github.com/czettnersandor" class="github"><span></span></a>
+        <a href="https://twitter.com/czettnersandor" class="twitter"><span></span></a>
+        <a href="http://uk.linkedin.com/in/sandorczettner/" class="linkedin"><span></span></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="page-content">
+  <div class="wrapper">
+    <div class="home-posts">
+      <ul class="post-list">
+        {% for post in site.posts %}
+          <li>
+            <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+            <h2>
+              <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+            </h2>
+          </li>
+        {% endfor %}
+      </ul>
+
+      <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+    </div>
+  </div>
+</div>

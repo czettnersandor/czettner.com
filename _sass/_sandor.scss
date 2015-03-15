@@ -1,0 +1,75 @@
+.site-header {
+    background: #000;
+    border: none;
+    .site-title {
+        color: #fff;
+        font-size: 36px;
+    }
+    .site-title:hover {
+        text-decoration: none;
+    }
+    .site-nav {
+        background-color: transparent;
+        border: none;
+        .page-link {
+            color: #fff;
+        }
+    }
+    @include media-query($on-palm) {
+        .site-nav .page-link {
+            color: #000;
+        }
+        .site-nav:hover {
+            background: #fff;
+        }
+    }
+}
+
+.home-hero-content {
+    background: url(../images/tinto.jpg) no-repeat center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.hero-header {
+    padding: 30px 0;
+}
+
+.hero-title {
+    span {
+        float: left;
+        display: block;
+        background: #ff3e2e;
+        color: white;
+        padding: 0 5px;
+    }
+    &:after {
+        content:"";
+        display:table;
+        clear:both;
+    }
+}
+
+.wraths {
+    margin-bottom: 30px;
+    text-align: center;
+    a {
+        display: inline-block;
+        width: 110px;
+        height: 92px;
+        span {
+            display: block;
+            width: 110px;
+            height: 92px;
+        }
+        &.github span {
+            background: url(../images/wrath-github.png);
+        }
+        &.linkedin span {
+            background: url(../images/wrath-linkedin.png);
+        }
+        &.twitter span {
+            background: url(../images/wrath-twitter.png);
+        }
+    }
+}
