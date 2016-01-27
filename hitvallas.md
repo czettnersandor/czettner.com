@@ -8,4 +8,4 @@ permalink: /hitvallas/
 
 In a rough translation: I believe in one God, I believe in one Homeland, I believe in eternal divine justice. I believe in the Resurrection of Hungary.
 
-This was mainly a creed, originating from a better age, transferred to the age of the [Neon Tiger](https://en.wikipedia.org/wiki/Ride_the_Tiger) by the [64 Counties Youth Movement](http://hvim.org/). 
+This was mainly a creed, originating from a better age, taken to the age of the [Neon Tiger](https://en.wikipedia.org/wiki/Ride_the_Tiger) by the [64 Counties Youth Movement](http://hvim.org/). 
