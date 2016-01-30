@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Magento thumbnails
+title: Magento - small_image és thumbnail beállítása scriptből
 created: 1311768416
 comments: true
 categories: [magento]

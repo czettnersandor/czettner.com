@@ -8,4 +8,4 @@ categories: [paragliding]
 Sunset, cattle, hill and the nylon
 Naplemente, tehenek, a hegy és a nejlon
 
-[video: http://youtu.be/EOmicfXkDuU]
+{% youtube EOmicfXkDuU %}

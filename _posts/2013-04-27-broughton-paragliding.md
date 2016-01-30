@@ -8,7 +8,7 @@ categories: [paragliding]
 Being in the air for almost 2.5 hours, I really enjoyed the day out away from work.
 
 The first part:
-[video:http://www.youtube.com/watch?v=VLzf7hBcJLo]
+{% youtube VLzf7hBcJLo %}
 
 Top landing:
-[video:http://www.youtube.com/watch?v=mOgZTveak58]
+{% youtube mOgZTveak58 %}

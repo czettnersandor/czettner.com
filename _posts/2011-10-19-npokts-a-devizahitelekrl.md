@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Devizahitelek
+title: Népokítás a devizahitelekről
 created: 1319046693
 comments: true
-categories: [Zsidódemokrácia]
+categories: [zsidódemokrácia]
 ---
 Bizottság vizsgálja a devizahitelek kialakulásának körülményeit. Tehát még egyszer: Bizottság vizsgálja a devizahitelek kialakulásának körülményeit. Nem elgépelés, ezt vizsgálja egy kilenc fős parlamenti bizottság. Fetrengve röhögős hír. Mit kell ezen vizsgálni? Megmondom én hol volt a hiba. A magyarok nagy hányada pénzügyi analfabéta, farokhimbáló, ostoba ökör.
 

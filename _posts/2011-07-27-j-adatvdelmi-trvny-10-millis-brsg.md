@@ -1,10 +1,9 @@
 ---
 layout: post
-title: Új adatvédelmi törvény
-  c8OhZw==
+title: Új adatvédelmi törvény - 10 milliós bírság
 created: 1311760423
 comments: true
-categories: [Zsidódemokrácia]
+categories: [zsidódemokrácia]
 ---
 A Parlament elfogadta az új adatvédelmi törvényt, melynek értelmében 2012. január 1-től számos változás fog életbe lépni az adatvédelemmel kapcsolatban. Az adatvédelmi nyilvántartást 2012-től a Nemzeti Adatvédelmi és Információszabadság Hatóság vezeti, és akár 10 millió Forintos bírsággal is sújthatja azt az adatkezelőt, aki bejelentési kötelezettségét nem teljesítve kezeli a személyes adatokat.
 

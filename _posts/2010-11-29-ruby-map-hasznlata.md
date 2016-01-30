@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Ruby map használata
+title: ruby - map használata
 created: 1291063548
 comments: true
 categories: [ruby]

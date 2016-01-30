@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Magento Menu alkategóriákból
+title: Magento - menü alkategóriákból
 created: 1314257851
 comments: true
 categories: [magento]

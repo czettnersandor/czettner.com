@@ -1,7 +1,6 @@
 ---
 layout: post
-title: Vállalkozás Magyarországon
-  bGtvesOzc2Rp
+title: '"Freelancing": két év Magyarországi vállalkozósdi'
 created: 1353705467
 comments: true
 categories: [php]

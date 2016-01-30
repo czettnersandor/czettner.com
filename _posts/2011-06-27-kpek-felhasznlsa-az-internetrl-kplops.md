@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Képek felhasználása az internetről
+title: Képek felhasználása az internetről. Képlopás?
 created: 1309199651
 comments: true
 categories: [jog]

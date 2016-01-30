@@ -3,7 +3,7 @@ layout: post
 title: Paragliding in Scotland.
 created: 1333918699
 comments: true
-categories: [paragliding]
+categories: [siklóernyő]
 ---
 Paragliding in Scotland offers some of the most scenic and challenging flying anywhere in the UK. Compared to the bureaucratic laws in Hungary, the UK has very permissive against the paragliders and hang-gliders as well. I was very surprised, because no licence required to fly in the UK. The site access thanks to the Land Reform Act & the Scottish Outdoor Access Code is very easy. Everybody with non-motorized vehicles permitted to do they own outdoor exercises such as dog-walking, mountain biking and paragliding as well. Does not matter who owns the field of grass where sheeps or cows grazing. Just keep away from closed gardens belongs to houses and planted fields. Of course, do not disturb the animals, take the care for the environment. These kind of things are regulated in the <a href="http://www.outdooraccess-scotland.com/">Scottish Outdoor Access Code</a>:
 

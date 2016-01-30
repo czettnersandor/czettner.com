@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Unicorn websyerver újraindítása
+title: Unicorn webszerver újraindítása
 created: 1297618995
 comments: true
 categories: [rails]

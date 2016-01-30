@@ -11,4 +11,4 @@ Even if it was not an epic day, the view was amazing and worth getting up before
 
 I saw 2 gliders took off from the very top of the hill, but they ended down there with us in 5 minutes. What a waste of 40 minutes walk! The day ended at around 4'o clock, when I launched into the nil wind, but right in front of the ridge surprisingly there was lift. Slowly I lost height and landed in the bottom car park.
 
-[video:http://www.youtube.com/watch?v=P0ugQQiyJwY]
+{% youtube P0ugQQiyJwY %}

@@ -1,9 +1,9 @@
 ---
 layout: post
-title: jQuerz AJAX
+title: AJAX lekérések az új jQuery 1.5-el
 created: 1297444290
 comments: true
-categories: [javascript, jquery]
+categories: [jquery, javascript]
 ---
 Könnyíti a kód átláthatóságát az 1.5-ös jQuery új képessége, ami az AJAX lekérések kezelését hivatott elvégezni. Ilyen egyszerű, már el is felejtettem, hogy régen ez hogyan működött:
 

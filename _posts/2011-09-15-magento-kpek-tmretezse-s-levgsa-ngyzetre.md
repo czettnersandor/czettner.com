@@ -1,7 +1,6 @@
 ---
 layout: post
-title: Magento képek átméretezése levágással
-  IG7DqWd5emV0cmU=
+title: Magento képek átméretezése és levágása négyzetre
 created: 1316074675
 comments: true
 categories: [magento]

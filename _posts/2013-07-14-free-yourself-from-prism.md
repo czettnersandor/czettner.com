@@ -3,7 +3,7 @@ layout: post
 title: Free Yourself from PRISM
 created: 1373841127
 comments: true
-categories: []
+categories: [zsidódemokrácia]
 ---
 I don't want other people spying on my online activity or at least, I want to make it as hard as possible. For other's sake, I'm sharing how is it possible. I have a few bad habits, for example I'm sharing a few photos with my family and friends on Facebook, but I think I should not concern about this too much. As long as the agent don't want to contact my family, it should not be a problem. And by the way, I have to deserve the attendance first.
 

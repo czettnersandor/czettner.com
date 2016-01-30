@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Számoljunk egy kicsit
+title: Számoljunk egy kicsit.
 created: 1332372083
 comments: true
-categories: [Zsidódemokrácia]
+categories: [zsidódemokrácia]
 ---
 Aki ingatlant akar venni Magyarországon:
 2-4% vagyonszerzési illeték (2% 2m Ft alatt, a puszta közepén van ennél olcsóbb jurta amúgy?) + Ügyvédi költség (mondjuk legyen 100 000 Ft)

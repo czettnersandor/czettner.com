@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Rails 3 elsődleges domain név
+title: Rails 3, elsődleges domainnév
 created: 1299882741
 comments: true
-categories: [rails, ruby]
+categories: [ruby, rails]
 ---
 Szükségem volt egy olyan átirányításra, ami mindent átirányít egy bizonyos domainre, ami nem arra a domainre megy. Egyszerű dolgom lett volna .htaccess segítségével, de ezt az oldalt nem apache szolgálja ki, hanem Unicorn, ami egy, a twitter által is használt Rack alapú webszerver. Az egyik megoldás egy egyszerű kis gem lett volna, a <a href="https://github.com/tylerhunt/rack-canonical-host">rack-canonical-host</a>, de unicorn alatt nem indult el vele az alkalmazás (A fejlesztői gépen Webrick fut, azzal működik). Nem akartam kísérletezgetni túl sokat, ezért született egy ötsoros hack, amit a routes.rb fájlba írtam, íme:
 

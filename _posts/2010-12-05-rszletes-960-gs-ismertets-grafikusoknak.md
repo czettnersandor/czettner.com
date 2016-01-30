@@ -1,9 +1,9 @@
 ---
 layout: post
-title: 960.gs
+title: Részletes 960.gs ismertetés grafikusoknak
 created: 1291570796
 comments: true
-categories: [css, photoshop]
+categories: [photoshop, css]
 ---
 A legtöbb CSS keretrendszer túl nagy, mert olyan kódot is tartalmaz, amit az adott weboldal nem is fog használni. Sokak szerint a CSS túl egyszerű ahhoz, hogy keretrendszert használjunk hozzá.
 

@@ -3,7 +3,7 @@ layout: post
 title: Új alkotmány
 created: 1326038302
 comments: true
-categories: [Zsidódemokrácia]
+categories: [zsidódemokrácia]
 ---
 Most futottam végig először az új Alkotmányt. Nos mintha a saját elképzeléseimre írták volna, nagyon tetszik, főleg ez a rész:
 

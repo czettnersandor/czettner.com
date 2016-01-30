@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Hatvannégy Vármegye
+title: Hatvannégy Vármegye - Sixty-four Counties
 created: 1325373263
 comments: true
 categories: [hvim]

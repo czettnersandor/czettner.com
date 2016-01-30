@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Polak Wegier dwa bratanki
+title: Polak, Węgier, dwa bratanki
 created: 1324848657
 comments: true
 categories: [scotland]

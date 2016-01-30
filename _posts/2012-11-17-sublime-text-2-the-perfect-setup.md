@@ -3,7 +3,7 @@ layout: post
 title: 'Sublime Text 2: the perfect setup'
 created: 1353190055
 comments: true
-categories: [php, sublime]
+categories: [sublime, php]
 ---
 I have been a long time NetBeans user and in the last year, I used Aptana as an Eclipse plugin a lot as well. I never thought these Java IDE's are fast and painless, but there was no better alternative for them.
 

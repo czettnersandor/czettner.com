@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Siklóernyő első felvonás
+title: Siklóernyő - első felvonás
 created: 1311020825
 comments: true
-categories: [paragliding]
+categories: [siklóernyő]
 ---
 Pár hete elkezdtem siklóernyő oktatásra járni és nagyon tetszik a dolog. Jelenleg ott tartok, hogy biztonságosan fel tudom húzni az ernyőt háttal, belefutással és ha háttal húztam fel, többnyire úgy meg is fordulok és elindulok rajthoz, hogy nem omlik össze a kupola.
 

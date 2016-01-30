@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Magento alapértelmezett ország
+title: Magento alapértelmezett ország az Admin felületen
 created: 1293100138
 comments: true
 categories: [magento]

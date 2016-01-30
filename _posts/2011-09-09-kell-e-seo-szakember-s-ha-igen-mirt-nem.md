@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Kell-e SEO szakember
+title: Kell-e SEO szakember és ha igen, miért nem?
 created: 1315597025
 comments: true
 categories: [seo]

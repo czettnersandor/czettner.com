@@ -1,10 +1,9 @@
 ---
 layout: post
-title: Miért tanulj a Flyawaz siklóernyős iskolával
-  bsOhbD8=
+title: Miért tanulj a Flyaway siklóernyős iskolánál?
 created: 1315170180
 comments: true
-categories: [paragliding]
+categories: [siklóernyő]
 ---
 Nyár végén ellátogattam egy kedvcsináló napra a <a href="http://flyaway.hu">Flyaway</a> siklóernyős iskolánál. Évek óta szerettem volna kipróbálni a siklóernyőzést, ez a vágy körülbelül azóta él, amióta a nászutunkon végignéztünk egy siklóernyős lecsúszást a partra ereszkedő szerpentin felett. Több nyolcast rajzolt a levegőben és leszállt a tenger felé, összecsomagolta az ernyőt a hátizsákba és felvette a fürdőnadrágot. Akkor még nem tudtam, hogy a siklóernyővel emelkedni is lehet, de az ereszkedő siklóernyőt is ki akartam próbálni. Mókásnak tűnt. Sokáig nem foglalkoztam ezzel a sporttal, de nyáron elkezdtem utánanézni a hazai lehetőségeknek.
 

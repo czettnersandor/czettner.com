@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Utolsó poszt indulás előtt
+title: Utolsó poszt indulás előtt.
 created: 1321280296
 comments: true
-categories: []
+categories: [skócia]
 ---
 Ez lesz az utolsó, összeszedem a történéseket 10 perc alatt. Éppen indulok fogorvoshoz, mert miért is ne az utolsó héten kezdjen el hidegre érzékenynek lenni a bal felső akárhányadik. Soron kívül kaptam időpontot, ami annyit jelent, hogy leülhetek a váróban és vagy bemehetek vagy ott ülhetek estig. De inkább, mint ismeretlen fogorvos Skóciában.
 

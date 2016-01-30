@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Turáni átok
+title: A turáni átok
 created: 1363029542
 comments: true
-categories: []
+categories: [zsidódemokrácia]
 ---
 A Turáni átok - Árulás – Esküszegés
 

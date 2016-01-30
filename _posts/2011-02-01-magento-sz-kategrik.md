@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Magento úszó kategóriák
+title: Magento - úszó kategóriák
 created: 1296555970
 comments: true
 categories: [magento]
