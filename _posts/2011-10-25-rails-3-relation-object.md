@@ -11,18 +11,18 @@ With the new Active Record functionality and Relation objects, it makes simple t
 
 In the controller:
 
-<code class="ruby">
+{% highlight ruby %}
 def index
   @posts = Post.where(:published => true).limit(20)
 end
-</code>
+{% endhighlight %}
 
 In the view:
 
-<code class="ruby">
+{% highlight ruby %}
 <% @posts.each do |post| %>
   <%= post.title %>
 <% end %>
-</code>
+{% endhighlight %}
 
 In this case, the query will be executed when we call .each. If we wrap that in a cache block, it will be executed only the cache is invalidated.

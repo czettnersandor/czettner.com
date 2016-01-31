@@ -10,33 +10,33 @@ Sometimes big files are getting in the way to the git repository. This could hap
 
 Deleting a file from history takes a lot of time. On big repositories with large binary blobs, it could be a memory hungry overnight process. To delete dev/database.sql from the history:
 
-<code>
+{% highlight html %}
 git filter-branch --force --index-filter "git rm --cached --ignore-unmatch dev/database.sql" --prune-empty --tag-name-filter cat -- --all
-</code>
+{% endhighlight %}
 
 Optionally, to save space locally, otherwise you have to wait 90 days until git clears the garbage out from the reflog:
 
-<code>
+{% highlight html %}
 git reflog expire --expire=now --all
 git gc --prune=now
-</code>
+{% endhighlight %}
 
 Then force push it to the remote repository:
 
-<code>
+{% highlight html %}
 git push origin --force --all
 git push origin --force --tags
-</code>
+{% endhighlight %}
 
 There is a backup folder git creates which you can now delete:
 
-<code>
+{% highlight html %}
 rm -rf .git/refs/original/
-</code>
+{% endhighlight %}
 
 After the remote origin is up to date, you have to tell the other developers to get the changes, they should run:
 
-<code>
+{% highlight html %}
 git fetch
 git reset origin/master --hard
-</code>
+{% endhighlight %}

@@ -23,17 +23,17 @@ Kezdjünk neki. (16:29-kor)
 
 A kedvenc programozási nyelvemet fogom használni, ami a ruby. Létrehozzuk a projekt könyvtárát:
 
-<code>
+{% highlight html %}
 $ mkdir webfeladat
 $ cd webfeladat
 $ touch webfeladat.rb fa.rb
 $ chmod +x webfeladat.rb fa.rb
 $ gvim fa.rb webfeladat.rb
-</code>
+{% endhighlight %}
 
 Itt megszerkesztjük azt a programot, ami létrehozza a fát, ezt egyszer fogjuk használni:
 
-<code class="ruby">
+{% highlight ruby %}
 #!/usr/bin/env ruby
 # fa.rb - copyright Sándor Czettner
 
@@ -51,7 +51,7 @@ treeFile = File.new("tree.txt", "w")
 end
 
 treeFile.close
-</code>
+{% endhighlight %}
 
 Következik az adatfeldolgozó script. A feladat szerint a standard bemenetről fog táplálkozni, ami azt jelenti, hogy linux alatt valami ilyen pranccsal lehet átadni neki egy fájlt:
 
@@ -59,7 +59,7 @@ $ cat tree.txt | ./webfeladat.rb
 
 Tehát a program:
 
-<code class="ruby">
+{% highlight ruby %}
 #!/usr/bin/env ruby
 # webfeladat.rb
 
@@ -88,7 +88,7 @@ $a = Array.new
 
 puts "The solution: "+find_path.to_s
 
-</code>
+{% endhighlight %}
 
 Hogyan működik?
 

@@ -8,7 +8,7 @@ categories: [php]
 Jelentős gyorsulás érhető el fcgid segítségével és egy költözés kapcsán sikerült találni egy olyan optimális beállítást, ami az éppen aktuális terhelésnél remek teljesítményt ad. Íme a régi, kisebb szerveren futó config:
 
 Debian Lenny, /etc/apache2/conf.d/php-fcgid.conf
-<code>
+{% highlight html %}
   AddHandler fcgid-script .fcgi .php
   # Where to look for the php.ini file?
   DefaultInitEnv PHPRC        "/etc/php5/cgi"
@@ -29,11 +29,11 @@ Debian Lenny, /etc/apache2/conf.d/php-fcgid.conf
   ThreadsPerChild        10
   MaxClients            300
   MaxRequestsPerChild  1000
-</code>
+{% endhighlight %}
 
 A költözés után ezzel tudtuk a napi terhelésnek megfelelően a memória kihasználtságot magasan tartani és még maradt bőven hely diskcache és buffer számára:
 
-<code>
+{% highlight html %}
   AddHandler fcgid-script .fcgi .php
   # Where to look for the php.ini file?
   DefaultInitEnv PHPRC  "/etc/php5/cgi"
@@ -55,4 +55,4 @@ A költözés után ezzel tudtuk a napi terhelésnek megfelelően a memória kih
   ThreadsPerChild        20
   MaxClients            800
   MaxRequestsPerChild  5000
-</code>
+{% endhighlight %}

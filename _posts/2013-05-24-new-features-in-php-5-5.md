@@ -11,7 +11,7 @@ The latest minor version, PHP 5.4 was released more than a year ago, it's time t
 
 It's an exciting new feature, a generator function looks just like a normal function, except that instead of returning a value, a generator yields as many values as it needs to. The main benefit of this we don't need to create an array to pass it to a foreach loop, it's possible to generate the return values while the loop is running. By such this way, it is saving a lot of memory and CPU time. A quick real world example:
 
-<code class="php">
+{% highlight php %}
 // In the block class:
 function formatRows($collection)
 {
@@ -26,9 +26,9 @@ function formatRows($collection)
         yield $row;
     }
 }
-</code>
+{% endhighlight %}
 
-<code class="php">
+{% highlight php %}
 // In the template:
 <div class="orderlist">
     <?php php foreach($this->formatRows($orders) as $order): ?>
@@ -39,7 +39,7 @@ function formatRows($collection)
         </div>
     <?php endforeach; ?>
 </div>
-</code>
+{% endhighlight %}
 
 Technically the formatRows function is returning with an array and can be used to give a value for an array variable. But in a for loop, it is yielding a value without allocating memory for a big array. In such way we can separate different logics into different places. Once there are no more values to be yielded, then the generator function can simply exit, and the calling code continues just as if an array has run out of values. Mixing return and yield is not allowed with an exception of an empty return statement which will exit the function and terminate the generator. The idea is a lightweight implementation of Java's Iterator classes without of the overhead of the class inheritance.
 

@@ -7,7 +7,7 @@ categories: [php]
 ---
 Put the case that we would like to follow our learned design patterns while working on a well OOP'ed project, but in PHP. We need the finally statement to delete a lockfile in all cases, including an exception. I think it's a good idea to implement this like the above:
 
-<code class="php">
+{% highlight php %}
 $lockfile = "/temp/appname.lock"
 try {
   // create the lockfile
@@ -20,7 +20,7 @@ try {
   // remove the lockfile
   unlink($lockfile);
 }
-</code>
+{% endhighlight %}
 
 Today is 2010, one year after the release of the PHP 5.3, we still don't have real OOP feeling when coding in PHP. The feature request of the finally statement is dated to <a href="http://bugs.php.net/bug.php?id=32100">2005</a>, and today, a PHP developer wrote to this request the following:
 

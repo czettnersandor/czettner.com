@@ -11,7 +11,7 @@ Egy példán keresztül mutatom be, hogy hogyan kell használni. Tegyük fel, ho
 
 A teszt osztály neve minden esetben így néz ki. ClassTest, tehát ebben az esetben LogTest. Két tesztet is szeretnénk elvégezni, ezért az alábbi funkciókat is hozzáadhatjuk a PHPUnit osztályhoz:
 
-<code class="php">
+{% highlight php %}
 <?php  
 require_once('Log.php');  
 class LogTest extends PHPUnit_TestCase  
@@ -22,38 +22,38 @@ class LogTest extends PHPUnit_TestCase
   public function testLogFileExists(){ }
   public function testDontPurgeLogFile(){ }
 }
-</code>
+{% endhighlight %}
 
 A setUp() függvény a teszt indításakor fog lefutni és ha elindult, a PHPUnit egyszerűen az összes test-el kezdődő függvényt végrehajtja, majd lezárásként a tearDown() következik, ahol jellemzően a megnyitott fájlok, megnyitott kapcsolatok zárhatóak le. Mi most itt a létrehozott naplófájlt fogjuk törölni.
 
 A setUp()-ban létrehozzuk a Log osztály egyik példányát. Fontos, hogy a __constructor egyetlen paramétere már tartalmazza a naplófájl nevét is:
 
-<code class="php">
+{% highlight php %}
 public function setUp(){
 	$this->log = new Log('/tmp/unittest.log');
 }
-</code>
+{% endhighlight %}
 
 A tearDown()-ban a létrehozott osztály példányát illik törölni. Aki programozott már valaha C64-et, annak berögzült, hogy ha megnyitjuk a floppy meghajtót, akkor azt valahol le is zárjuk, különben folyamatosan világítani fog a lámpája, meg egyébként is tiszta kódot eredményez, ha megtesszük, a garbage collectornak is kevesebb dolga lesz. Ezen kívül itt törölni is kell a létrehozott logfájlt, a fájlnevet a Log osztály eltárolja, ezért az onnan nyerjük ki, hogy ne kelljen feleslegesen mégyegyszer begépelni itt is a fájlnevet:
 
-<code class="php">
+{% highlight php %}
 public function tearDown(){
 	unlink($this->log->filename);
 	unset($this->log);
 }
-</code>
+{% endhighlight %}
 
 Mivel a testLogFileExists() a setUp() után fog lefutni, itt kell ellenőrizni, hogy a fájl valóban létrejött-e. A PHPUnit szintaktikája nagyon egyszerű, mindössze ennyit kell tennünk:
 
-<code class="php">
+{% highlight php %}
 public function testLogFileExists(){
 	$this->assertTrue(file_exists($this->log->filename));
 }
-</code>
+{% endhighlight %}
 
 Ha a fájl ezen a ponton nem létezik, a teszt lefuttatásakor hibát fogunk kapni, mivel a teszt egyik állítása (assert) nem lett igaz. A következő teszt annak a vizsgálata, hogy a fájlba írás után és újra megnyitva a fájlt ezzel az osztállyal nem egy üres fájlt kapunk. Bár én nem bíznám rá a banki tranzakciók logját, de ez a teszt arra is alkalmas, hogy megnézze, valóban beleírt-e a fájlba a Log osztály. A fájlnevet megint a példányból olvassuk ki:
 
-<code class="php">
+{% highlight php %}
 public function testDontPurgeLogFile(){
 	$this->log->write("Hello world!");
 	$filename = $this->log->filename;
@@ -61,11 +61,11 @@ public function testDontPurgeLogFile(){
 	$this->log = new Log($filename);
 	$this->assertTrue(filesize($filename) > 0);
 }
-</code>
+{% endhighlight %}
 
 Ennyi. A teszt futtatását egy egyszerű php fájlból kezdeményezhetjük, ezt szokás feladatonként csoportosítani, vagy egy-egy nagyobb release után kibővíteni. Futtathatóvá téve gyorsan futtatható parancssorból:
 
-<code class="php">
+{% highlight php %}
 <?php
 require_once 'PHPUnit.php';
 require_once 'LogTest.php';
@@ -74,12 +74,12 @@ $suite  = new PHPUnit_TestSuite("LogTest");
 $result = PHPUnit::run($suite);
 
 echo $result->toString();
-</code>
+{% endhighlight %}
 
 
 Ezek után a Log osztály implementációja gyerekjáték, hiszen nem csak az UML specifikáció adott, hanem a szükséges tesztek is, tehát tudjuk, hogy hogyan kell kinéznie az osztálynak és hogyan kell működnie. Így néz ki a Log.php:
 
-<code class="php">
+{% highlight php %}
 <?php
 
 Class Log {
@@ -100,7 +100,7 @@ Class Log {
 	}
 
 }
-</code>
+{% endhighlight %}
 
 Miért jó ez? Nem szükséges éles környezetbe tenni az osztályt ahhoz, hogy megtudjuk, helyesen működik-e. Ha később új képességekkel szeretnénk felruházni, kibővíthetjük a LogTest osztályt a megfelelő funkciókkal, majd anélkül tesztelhetjük a helyes működést, hogy a teljes alkalmazást el kelljen indítani és egyúttal lefutnak a korábbi tesztek is, így biztosak lehetünk abban, hogy az új feladat megvalósításával nem rontottunk el olyat, ami korábban már működött. A legfontosabb, hogy a felhasználó által végzett teszt sokkal lassabb, mint az automatizált tesztek és nem is biztos, hogy a fejlesztő észreveszi, hogy hol hibázott. Remélem sokakat sikerült most leszoktatni a var_dump és echo felesleges és bosszantó használatától és aki még nem kezdte el a saját kódja unit tesztelését, mostantól elkezdi, hiszen erősen javítja a fejlesztés hatékonyságát.
 

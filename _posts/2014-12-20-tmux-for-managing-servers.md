@@ -20,13 +20,13 @@ Currently I'm a Tmux beginner, so here is how I started.
 
 The default keyboard shortcut to enter a mode which accepts the secondary key is <strong>Ctrl+B</strong>. The man page of Tmux is referring to this key as C-b, but it means <strong>Ctrl+B</strong>, I guess this naming is coming from Emacs. If you install tmux, it will not start automatically. You can even start it by entering <strong>tmux</strong> to your shell, or you can add it to the shell's startup script. I have this one in my .zshrc:
 
-<code>
+{% highlight html %}
 # TMUX
 if which tmux 2>&1 >/dev/null; then
    #if not inside a tmux session, and if no session is started, start a new session
    test -z "$TMUX" && (tmux attach || tmux new-session)
 fi
-</code>
+{% endhighlight %}
 
 <h3>Detaching from the terminal</h3>
 

@@ -20,7 +20,7 @@ az /app/code/core és lib könyvtárban lévő dolgokat egyszerűen másoljuk ki
 Az első fájl a saját, éppen használt template könyvtárunkból jön, tehát nem biztos, hogy pont ugyanez az elérési út.
 
 app/code/local/Mage/Catalog/Model/Product/Image.php fájlba:
-<code class="php">
+{% highlight php %}
     public function adaptiveResize()
     {
         if (is_null($this->getWidth()) && is_null($this->getHeight())) {
@@ -29,11 +29,11 @@ app/code/local/Mage/Catalog/Model/Product/Image.php fájlba:
         $this->getImageProcessor()->adaptiveResize($this->_width, $this->_height);
         return $this;
     }
-</code>
+{% endhighlight %}
 
 app/code/local/Varien/Image.php fájlba:
 
-<code class="php">
+{% highlight php %}
     /**
     * Adaptive resize an image
     *
@@ -46,10 +46,10 @@ app/code/local/Varien/Image.php fájlba:
     {
         return $this->_getAdapter()->adaptiveResize($width, $height);
     }
-</code>
+{% endhighlight %}
 
 app/code/local/Varien/Image/Adapter/Gd2.php fájlba:
-<code class="php">
+{% highlight php %}
     /**
      * Change the image size down to a best match then crop from the center
      *
@@ -87,10 +87,10 @@ app/code/local/Varien/Image/Adapter/Gd2.php fájlba:
         $this->_imageHandler = $newImage;
         $this->refreshImageDimensions();
     }
-</code>
+{% endhighlight %}
 
 app/code/local/Mage/Catalog/Helper/Image.php fájlba:
-<code class="php">
+{% highlight php %}
     // A class első sora alá a többi változó deklarációhoz:
     protected $_scheduleAdaptiveResize = false;
 
@@ -101,15 +101,15 @@ app/code/local/Mage/Catalog/Helper/Image.php fájlba:
         $this->_scheduleAdaptiveResize = true;
         return $this;
     }
-</code>
+{% endhighlight %}
 
 az alábbi fájlban van egy ilyen sor:
 app/design/frontend/default/default/template/catalog/product/list.phtml
-<code class="php">
+{% highlight php %}
 <a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" class="product-image"><img src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(170); ?>" width="170" height="170" alt="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" /></a>
-</code>
+{% endhighlight %}
 
 Ezt erre kell cserélni:
-<code class="php">
+{% highlight php %}
 
-</code>
+{% endhighlight %}

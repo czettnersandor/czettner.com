@@ -13,14 +13,14 @@ at terminal after unmounted the drive first.
 
 The description of the -O switch from the man page:
 
-<code class="no-highlight">
+{% highlight no-highlight %}
 -O [^]feature[,...]
               Set or clear the indicated filesystem features (options) in the  filesystem.   More  than
               one  filesystem  feature  can  be  cleared  or  set  by  separating features with commas.
               Filesystem features prefixed with a caret character ('^') will be cleared in the filesys‐
               tem's  superblock; filesystem features without a prefix character or prefixed with a plus
               character ('+') will be added to the filesystem.
-</code>
+{% endhighlight %}
 
 This will make the ext3 filesystem to ext2 (non journalling ext3) in around 10 minutes.
 

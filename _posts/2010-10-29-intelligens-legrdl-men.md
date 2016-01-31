@@ -26,7 +26,7 @@ Ugye milyen bosszantó, amikor a legördülő menüből véletlenül kimegy az e
 </javascript>
 
 Az egész menü CSS-e így néz ki:
-<code class="css">
+{% highlight css %}
 #block-menu-primary-links /* "Primary links" block */ {
   background: #A99C6B;
   margin-left: 16px;
@@ -67,4 +67,4 @@ Az egész menü CSS-e így néz ki:
 #block-menu-primary-links ul li ul li {
   float: none;
 }
-</code>
+{% endhighlight %}

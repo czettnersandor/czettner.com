@@ -13,7 +13,7 @@ The migrate module is designed to migrate content into Drupal from various sourc
 
 In order to import the categories, I need to register the migration with a hook, like mymodule_register_migrations. Replace the mymodule with the proper name of your custom module.
 
-<code class="php">
+{% highlight php %}
   $common_arguments = array(
     'source_connection' => 'legacy',
     'source_version' => 6,
@@ -35,13 +35,13 @@ In order to import the categories, I need to register the migration with a hook,
     Migration::registerMigration($arguments['class_name'], $arguments['machine_name'],
                                  $arguments);
   }
-</code>
+{% endhighlight %}
 
 I will reuse $common_arguments, so the effective code is much smaller for the whole registration.
 
 In order to import image fields from Drupal 6, there are many ways to success, I choose to import the images first, then make a dependency on the images from node fields rather than import the images with the nodes.
 
-<code class="php">
+{% highlight php %}
   $image_arguments = array(
     array(
       'class_name' => 'SandorImageMigration',
@@ -66,11 +66,11 @@ In order to import image fields from Drupal 6, there are many ways to success, I
     Migration::registerMigration($arguments['class_name'], $arguments['machine_name'],
                                  $arguments);
   }
-</code>
+{% endhighlight %}
 
 And so on, I'm not going to share the whole source code, but the documentation is really good and the source code of the module is very handy. As you can see, I have imported the two field separatedly. <a href="http://drupal.org/project/migrate_d2d">migrate_d2d</a> by default is trying to import everything and for such reason, I had to extend the SQL query generator to filter the field results to only one image field. This can be done easily:
 
-<code class="php">
+{% highlight php %}
 /**
  * Image-specific mappings and handling.
  */
@@ -89,11 +89,11 @@ class SandorImageMigration extends DrupalFile6Migration {
     return $query;
   }
 }
-</code>
+{% endhighlight %}
 
 Because of this, the node import is going to be more tricky, but I saved some development time on importing the images once. Let's see the blogpost import class:
 
-<code class="php">
+{% highlight php %}
 class SandorArticleMigration extends SandorNodeMigration {
 
   public function prepareRow($row) {
@@ -126,6 +126,6 @@ class SandorArticleMigration extends SandorNodeMigration {
          ->separator(',');
   }
 }
-</code>
+{% endhighlight %}
 
 The trick is that I need to tell the field it will import a FileFid instead of a FileName and also, there are some more logic to fill in the Tags field with a comma separated value, extracted from the Drupal 6 tables. Remember, I have already created the Terms as the blogposts are depending from them.

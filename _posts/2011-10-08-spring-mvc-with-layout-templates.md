@@ -7,16 +7,16 @@ categories: [java]
 ---
 If you have used other MVC frameworks (Rails or Grails for example) you will miss layout templates from Spring. I found an easy-to use solution which is also used in Grails under the hood. If you use Maven in your project, simply add it to the pom.xml file under the dependencies:
 
-<code class="xml">
+{% highlight xml %}
 <dependency>
     <groupId>opensymphony</groupId>
     <artifactId>sitemesh</artifactId>
     <version>2.4.2</version>
 </dependency>
-</code>
+{% endhighlight %}
 
 Next, add the following to your web.xml:
-<code class="xml">
+{% highlight xml %}
 <filter>
     <filter-name>sitemesh</filter-name>
     <filter-class>com.opensymphony.module.sitemesh.filter.PageFilter</filter-class>
@@ -25,44 +25,44 @@ Next, add the following to your web.xml:
     <filter-name>sitemesh</filter-name>
     <url-pattern>/*</url-pattern>
 </filter-mapping>
-</code>
+{% endhighlight %}
 
 Add a new decorators.xml file under the WEB-INF directory:
-<code class="xml">
+{% highlight xml %}
 <decorators defaultdir="/WEB-INF/layouts">
     <decorator name="application" page="application.jsp">
         <pattern>/*</pattern>
     </decorator>
 </decorators>
-</code>
+{% endhighlight %}
 
 This means /WEB-INF/layouts/application.jsp will be used for every url your application catch. You can specify others, for example /admin/* or /user/*:
 
-<code class="xml">
+{% highlight xml %}
     <decorator name="admin" page="admin.jsp">
         <pattern>/admin/*</pattern>
     </decorator>
     <decorator name="user" page="login.jsp">
         <pattern>/user/*</pattern>
     </decorator>
-</code>
+{% endhighlight %}
 
 Now. you need to create the layout file(s) under /WEB-INF/layouts directory. Use the following code in it:
-<code class="xml">
+{% highlight xml %}
 <%@ taglib prefix="decorator" uri="http://www.opensymphony.com/sitemesh/decorator" %>
 ...html, head, title, etc...
 <nav>
 <decorator:navigation/>
 </nav>
 <decorator:body/>
-</code>
+{% endhighlight %}
 
 <decorator:body/> will be replaced as specified in the views:
-<code>
+{% highlight html %}
 <body>
    <h1>The title of an article</h1>
    <p>The body of the article</p>
 </body>
-</code>
+{% endhighlight %}
 
 Visit the official SiteMesh website for more specified examples: http://www.opensymphony.com/sitemesh/

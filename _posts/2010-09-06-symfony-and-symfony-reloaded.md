@@ -10,9 +10,9 @@ Ez mondjuk nem a symfony keretrendszernek köszönhető, de tény, hogy kevésb�
 
 Archlinuxra elérhető a parancssoros verziója is, így a modul generálás csak ennyi:
 
-<code>
+{% highlight html %}
 $ symfony generate:module frontend content
-</code>
+{% endhighlight %}
 
 A frontend az alkalmazás neve, a content pedig a modul neve. Modul itt lényegében controllert jelent, csak ugye minden máshol van benne, mint kohana-ban.
 

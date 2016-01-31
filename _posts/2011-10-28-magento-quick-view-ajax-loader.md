@@ -16,7 +16,7 @@ Installation instructions
 <li>Copy skin/frontend/default/default/* to the active skin folder</li>
 <li>Modify your list.phtml image section with the following code:</li>
 
-<code class="php">
+{% highlight php %}
 <p class ="product-image">
     <a href="<?php echo $this->getUrl('ajax/product/quickview/id/' . $_product->getId()) ?>" title="<?php echo $this->htmlEscape($_product->getName()) ?>" class="ajax">Gyors nézet</a>
     
@@ -24,11 +24,11 @@ Installation instructions
         <img src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(140); ?>" width="140" height="140" alt="<?php echo $this->htmlEscape($this->getImageLabel($_product, 'small_image')) ?>" />
     </a>
 </p>
-</code>
+{% endhighlight %}
 
 <li>Add this Javascipt before the close "body" tag:</li>
 
-<code class="php">
+{% highlight php %}
 <script type="text/javascript" src="<?php echo $this->getSkinUrl('js/productInfo.js') ?>"></script>
 <script type="text/javascript">
 Event.observe(window, 'load', function() {
@@ -38,4 +38,4 @@ Event.observe(window, 'load', function() {
     });
 });
 </script>
-</code>
+{% endhighlight %}

@@ -9,8 +9,8 @@ Let’s say you want to make a 301 redirect from any domain (for example: www, d
 
 Just make your own wildcard server_name directive and add this to your server{} block:
 
-<code>
+{% highlight html %}
 if ($host != 'your_domain.com' ) {
   rewrite  ^/(.*)$  http://your_domain.com/$1  permanent;
 }
-</code>
+{% endhighlight %}

@@ -4,7 +4,7 @@ title: Analytics Page Speed Cheat
 created: 1383127647
 comments: true
 ---
-<code>
+{% highlight html %}
     timing = {
         navigationStart: window.performance.timing.navigationStart+450,
         unloadEventStart: window.performance.timing.unloadEventStart,
@@ -29,4 +29,4 @@ comments: true
     }
 
     window.performance = { timing: timing, navigation: window.performance.navigation }
-</code>
+{% endhighlight %}

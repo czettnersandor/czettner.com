@@ -16,9 +16,9 @@ So how to install Vagrant?
 
 First <a href="https://www.virtualbox.org/wiki/Downloads">Download VirtualBox</a> and install it. In most Linux systems, it can be done from the official repositories, for example on Ubuntu it's easy as:
 
-<code class="no-highlight">
+{% highlight no-highlight %}
 apt-get install virtualbox
-</code>
+{% endhighlight %}
 
 <h3>Step 2: Install Vagrant</h3>
 
@@ -26,9 +26,9 @@ Ubuntu is still supplying a package for Vagrant, but I don't recommend it as it'
 
 If done, fire up a terminal and download a base box which will be used as a base for every virtual machine. I choose the latest LTS version of Ubuntu:
 
-<code class="no-highlight">
+{% highlight no-highlight %}
 vagrant box add precise64 http://files.vagrantup.com/precise64.box
-</code>
+{% endhighlight %}
 
 How it works? Vagrant is configuring a virtual machine in Virtualbox and it's creating a synchronised folder inside the virtual machine, so every time you save a file in your text editor, it will be visible from the VM. This directory is your document root. It can serve Magento, Drupal or anything.
 
@@ -42,17 +42,17 @@ You can follow the Vagrant documentation about how to create a VM and install th
 <li>running various scripts</li>
 </ul>
 Download my ready to use configuration to serve Magento and Drupal websites and start the virtual machine. Note this will take 5-10 minutes first time because Chef will install the required software and modules:
-<code class="no-highlight">
+{% highlight no-highlight %}
 git clone git@github.com:healthywebsites/vagrant-lamp.git
 cd vagrant-lamp
 vagrant up
-</code>
+{% endhighlight %}
 
 Now you have to add this to your /etc/hosts file:
 
-<code class="no-highlight">
+{% highlight no-highlight %}
 127.0.0.1 www.dev-site.com dev-site.com 
-</code>
+{% endhighlight %}
 
 If done, then you will be able to access the site from this url: http://www.dev-site.com:8080/
 
@@ -66,12 +66,12 @@ I'm not a big fan of var_dump in the code, we have a nice tool for debugging in 
 
 There is already an index.php in your document root, it's content is:
 
-<code class="php">
+{% highlight php %}
 <?php
 // Add your breakpoint after the next line to test the debugger
 $testvar = "something";
 phpinfo();
-</code>
+{% endhighlight %}
 
 Place a breakpoint on the phpinfo(); line and refresh the page. You will get something similar:
 

@@ -17,7 +17,7 @@ Typography in the basic manner means where does the letter look like and where i
 
 Is indenting and commenting our code enough? Let's find out.
 
-<code class="php">
+{% highlight php %}
 class Mage_Adminhtml_Block_Api_User_Edit_Tab_Roles extends Mage_Adminhtml_Block_Widget_Grid
 {
     protected function _prepareColumns()
@@ -32,11 +32,11 @@ class Mage_Adminhtml_Block_Api_User_Edit_Tab_Roles extends Mage_Adminhtml_Block_
             'align'     => 'center',
             'index'     => 'role_id'
         ));
-</code>
+{% endhighlight %}
 
 I like how the array hooks together. It is good for the eyes in this example. The eye flows easily over it and it's clear where is the key and where is the value. And because of the double closing parenthesis it's easy to understand we closed the function call as well.
 
-<code class="php">
+{% highlight php %}
 class Mage_GiftMessage_Block_Message_Form extends Mage_Core_Block_Template
 {
 
@@ -49,7 +49,7 @@ class Mage_GiftMessage_Block_Message_Form extends Mage_Core_Block_Template
                             array('uniqueId'=>$this->getRequest()->getParam('uniqueId'))
         );
     }
-</code>
+{% endhighlight %}
 
 This is where the language limitations taking place. It's clearly not good as this can happen again in the code and makes the indentation fuzzy with virtually different deepness of the parameter list because the length of the function name can be different. I would rather see a single indentation instead. It would improve the readability so much.
 

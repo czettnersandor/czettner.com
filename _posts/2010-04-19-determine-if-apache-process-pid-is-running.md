@@ -8,7 +8,7 @@ One of my small VPS was often running out it's memory. When this occur, some pro
 
 The pidof command combines the ps aux and the grep command. Here is a sample script what can keeping alive your apache webserver:
 
-<code>
+{% highlight html %}
 #!/bin/bash
 RESTART="/etc/init.d/apache2 restart"
 PGREP="/usr/bin/pgrep"
@@ -22,9 +22,9 @@ then
  # restart apache
  $RESTART
 fi
-</code>
+{% endhighlight %}
 
 You can define a cron job per minute to run your script:
-<code>
+{% highlight html %}
 */1 * * * * /home/zoner/keepalive.sh >/dev/null 2>&1
-</code>
+{% endhighlight %}

@@ -13,7 +13,7 @@ A legegyszerűbb módja ennek, ha van egy factory osztályunk, annak pedig egy o
 
 Ha például egy online fizetési módot szeretnénk megvalósítani PHP segítségével, az így fog kinézni:
 
-<code class="php">
+{% highlight php %}
 class Payment {
   public $data;
   function __constructor($data) {
@@ -45,13 +45,13 @@ class PaymentFactory {
 $data = $_POST;
 $pay = PaymentFactory::createPayment($data);
 $pay->process();
-</code>
+{% endhighlight %}
 
 Persze ez egy nagyon kigyomlált kód az érthetőség kedvéért, validálás nélkül használja a $_POST változót, de az majd egy másik történet lesz. Mint látható az, hogy melyik fizetési mód lesz példányosítva egy felhasználótól érkező form alapján dől el és ez meghatározhatja a következő lépést is, például a kártyaadatok bekérése vagy az átirányítást a PayPal fizetőoldalára. A kliens kódnak csak arról kell tudnia, hogy a form milyen értékeket adhat át az asszociatív tömb "type" részeként. Jelen esetben 1-et vagy 2-t, de tulajdonképpen ez a kód nagyon rugalmas, kibővíthető több fizetési móddal is. Továbbgondolva egyetlen hátránya, hogy a sok leaf osztály miatt nagyon megnőhet az a switch blokk és ugyan nem valósult meg kódduplikáció, de mégis szeretem kerülni a túl sok if-et és switch-et, ha objektumorientált programozásról beszélek.
 
 Nézzük, mi van akkor, ha a kliens számára biztosítani szeretnénk, hogy a saját osztályait gyárthassa a saját feltételei alapján? Erre találták ki az <strong>Abstract Factory</strong> mintát. Az alábbi példa egy kártyát és egy virtuális fizetőeszköz implementálását várja el a kliens osztályától.
 
-<code class="php">
+{% highlight php %}
 abstract class AbstractPaymentFactory {
   abstract function getCardPayment();
   abstract function getVirtualPayment();
@@ -90,7 +90,7 @@ if($_POST['type'] == 1) {
   $pay = $factory->getVirtualPayment();
 }
 $pay->process();
-</code>
+{% endhighlight %}
 
 Ha olyan vagy mint én és szereted rendben tudni a kódodat, akkor most megszólalt a szirénád, mivel sokféle osztály esetén rengeteg kód duplikáció keletkezik fölöslegesen. A következő minta, ami megoldja ezt a problémát, a <strong>Decorator Pattern</strong>, de azt majd egy következő bejegyzésben...
 

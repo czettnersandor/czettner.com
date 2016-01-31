@@ -30,8 +30,8 @@ Ezek közül a legfontosabbak:
 
 Tehát ezeket alaposan meg kell ismerni, nem elég már csípőből tudni, hogy ez a pár soros mit ír ki:
 
-<code class="php">
+{% highlight php %}
 $a = 'name';
 $$a = 'Lord';
 echo $name;
-</code>
+{% endhighlight %}

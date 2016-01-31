@@ -46,15 +46,15 @@ A második # jellel kezdődő megjegyzés sorban beállítottam a fájl karakter
 
 Ez a nyelv szinte kötelező tanulmány, hiszen az összes *BSD és Linux parancsértelmező használja. Az egyszerű felhasználó szemszögéből nézve ha egy könyvtárban, ahol létezik a hello fájlnevű perl script és kiadjuk a ./hello parancsot, szinte biztos, hogy lefut az adott perl program. Első ránézésre C, awk és persze sh programozási nyelvekből merít, a wikipédia szerint pedig "könnyű benne olvashatatlan kódot készíteni". Lássuk a pythonnál is kezdett elágazás (if) paranccsal:
 
-<code>
+{% highlight html %}
 if( $d eq "kakukk\n" ){
   print "Helló világ!\n";
   }else{ print "Ma nincs jó napod!\n" }
-</code>
+{% endhighlight %}
 
  És valóban. Mint ahogy például PHP-ban és C-ben megszokhattuk, itt sem kell a lezáró kapcsos zárójel előtt lévő parancs végére pontosvesszőt tenni. Az operátorok pedig némiképp eltérnek a C-s, PHP-s gyakorlattól. Sajnos a goto is megengedett, ami további lehetőséget nyújt barkács programozók számára a továbbfejleszthetetlen és ronda forrás írásához. Osztályt a Package paranccsal lehet létrehozni, amihez nem létezik lezárás, tehát az osztály definíciója a fájl végéig vagy a következő Package parancsig terjed. Modern megoldásként a programkódot a Package main után kell írni. Csalódottságom gombócát lenyelve folytatom az objektumorientált példával:
 
-<code>
+{% highlight html %}
 #!/usr/bin/perl
 package Hello;
 #constructor
@@ -73,6 +73,6 @@ package main;
     my $hello = Hello->new();
     print $hello->Szoveg;
 }
-</code>
+{% endhighlight %}
 
 Szép, ugye? Sajnos nem. Következő&nbsp; leírásom a ruby nyelvről fog szólni. Érdemes elolvasni a <a href="http://hu.wikipedia.org/wiki/Ruby">wikipedia leírását</a> ezzel kapcsolatban.

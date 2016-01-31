@@ -55,9 +55,9 @@ https is not just slow. In a high traffic website it eats a lot of CPU. Some SSL
 
 To list all the available cryptographic algorithms perform this command:
 
-<code class="sh">
+{% highlight sh %}
 openssl ciphers -v 'ALL:RC4+RSA:+HIGH:+MEDIUM:+LOW:+SSLv2:+EXP'
-</code>
+{% endhighlight %}
 
 My result is the following:
 
@@ -179,15 +179,15 @@ That's a lot. 9 of them are marked as 'export', that means it was used in the pa
 
 Let's do some benchmark on every protocol. Fortunately we have a nice command to do this, but it will take 20 minutes and causing high server load:
 
-<code>
+{% highlight html %}
 openssl speed
-</code>
+{% endhighlight %}
 
 <a href="http://pastebin.com/fwxAtFqx">My results are here</a>
 
 It's a big task to remove all the non required ones, but here is a simple Apache directive only for the purpose to pass the ScanAlert scan (just found it on Google:
 
-<code>SSLCipherSuite ALL:!ADH:!NULL:!EXP:!SSLv2:!LOW:!MEDIUM:RC4+RSA:+HIGH</code>
+{% highlight html %}SSLCipherSuite ALL:!ADH:!NULL:!EXP:!SSLv2:!LOW:!MEDIUM:RC4+RSA:+HIGH{% endhighlight %}
 
 This code should be in ssl.conf in a default container labeled as &lt;VirtualHost _default_:443&gt;. Of course in order to work this directive in other virtualhosts using the non default IP address, should be repeated in the virtualhost file as well.
 

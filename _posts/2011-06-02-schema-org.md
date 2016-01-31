@@ -6,7 +6,7 @@ comments: true
 categories: [seo]
 ---
 A google, a bing és a yahoo összedolgozik. Érdekes dolog ez. A három keresőcég létrehozott egy közös oldalt, a <a href="http://schema.org">schema.org</a>-ot. Felfogható ez úgy is, mint valami segítség a keresőgépektől, hogy milyen html struktúrát várnak el bizonyos tartalmakra a jobb találatok érdekében. Webfejlesztőként fontos ezt áttanulmányozni, mert például megtudható az oldalból, hogy milyen html tagekkel kell ellátni egy eseménynaptárat vagy egy címlistát. A címlista egyik eleme valahogy így néz ki:
-<code class="html">
+{% highlight html %}
 <div itemscope itemtype="http://schema.org/LocalBusiness">
   <h1><span itemprop="name">Beachwalk Beachwear & Giftware</span></h1>
   <span itemprop="description"> A superb collection of fine gifts and clothing
@@ -18,7 +18,7 @@ A google, a bing és a yahoo összedolgozik. Érdekes dolog ez. A három kereső
   </div>
   Phone: <span itemprop="telephone">850-648-4200</span>
 </div>
-</code>
+{% endhighlight %}
 
 Miért jó ez a keresők számára? Nagyon egyszerű: lényegében áttolják a saját dolgukat a webmesterek vagy fejlesztők felé, tehát elvárják, hogy a tartalmat körülvevő html tagek megmondják, hogy mi van közöttük ahelyett, hogy nekik kelljen azt felismerni. Az nem valószínű, hogy innentől kezdve a Google nem parsolja a telefonszámokat vagy postacímeket, de azt el tudom képzelni, hogy előrébb helyezi a rangsorban, ha egy weblap ilyen plusz információkat tartalmaz és ráadásul az adatok is helyesek. Azaz "Address" attribútum valóban címet jelöl.
 

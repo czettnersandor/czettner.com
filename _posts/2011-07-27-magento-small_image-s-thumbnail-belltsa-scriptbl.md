@@ -7,7 +7,7 @@ categories: [magento]
 ---
 Egy import során rengeteg kép került bele egy termékadatbázisba, viszont a small_image és thumbnail kimaradt, ami a terméklistákban és a kapcsolódó termékek között így nem tudott megjelenni. Írtam egy rövid scriptet, ami néhány perc futás után megoldotta a problémát:
 
-<code class="php">
+{% highlight php %}
 require 'app/Mage.php';
 Mage::app();
 
@@ -22,4 +22,4 @@ foreach ($products as $product) {
     if (!$product->hasThumbnail()) $product->setThumbnail($image);
     $product->save();
 }
-</code>
+{% endhighlight %}

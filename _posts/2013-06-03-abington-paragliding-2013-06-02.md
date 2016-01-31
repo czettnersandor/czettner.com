@@ -6,4 +6,4 @@ comments: true
 categories: [paragliding]
 ---
 A wonderful day at Abington with a lot of nice flying chops :) Thank you everyone and the greatest musicians.
-[video:http://youtu.be/4yCuEPHnyx0]
+{% youtube 4yCuEPHnyx0 %}

@@ -8,25 +8,25 @@ Elkezdted használni a Rails 3-at? Biztosan észlelted, hogy a mysql adatbáziso
 
 A Gemfile fájlba tedd a következőt:
 
-<code>
+{% highlight html %}
 gem "mysql2"
-</code>
+{% endhighlight %}
 
 A databases.yml fájlt ezután hasonlóan írd át:
-<code>
+{% highlight html %}
 development:
   adapter: mysql2
   database: adatbazisnev
   username: adatbazisuser
   password: jelszo
   encoding: utf8
-</code>
+{% endhighlight %}
 
 A "mysql" gem egy másik alternatívája a "ruby-mysql" gem, de ezt azért nem ajánlom, mert a "mysql2" bináris kódjával ellentétben az interpretált ruby nyelven írták, ezért nagyobb terhelés mellett több erőforrást fog használni. Akkor lehet jó, amikor arra az architektúrára, amire fejlesztünk, a mysql2 nem elérhető.
 
 A harmadik megoldás kicsit csúnya, de nagyon jól működik. Helyezzük el az alábbi kódot valahol a /lib könyvtáron belül:
 
-<code class="ruby">
+{% highlight ruby %}
 require 'mysql'
 
 class Mysql::Result
@@ -51,6 +51,6 @@ class Mysql::Result
   alias each_hash_orig each_hash
   alias each_hash each_hash_utf8
 end
-</code>
+{% endhighlight %}
 
 Mit is csinál ez? Kiegészíti a Mysql::Result osztályt azokkal a függvényekkel, amik az UTF-8 konverziót végzik, majd az eredeti függvényekre egy aliast gyárt. Az each, each_has függvény így az új kódot fogja futtatni, ami már kezeli az UTF-8 karaktereket. Ha másra nem is jó ez a megoldás, a ruby nyelv szépségének és olvashatóságának bemutatására mindenképpen. Itt üdvözlök minden PHP-only programozót!

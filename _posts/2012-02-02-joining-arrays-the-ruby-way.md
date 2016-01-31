@@ -7,27 +7,27 @@ categories: [ruby]
 ---
 Like PHP's join function but in more elegant ruby way. Let's see how can you do it:
 
-<code class="ruby">
+{% highlight ruby %}
 [1, 2, 3, 4, 5].join(',')
-</code>
+{% endhighlight %}
 
 Or:
 
-<code class="ruby">
+{% highlight ruby %}
 [1, 2, 3, 4, 5] * ','
-</code>
+{% endhighlight %}
 Yes, the multiply operator does the job as well.
 
 Or:
 
-<code class="ruby">
+{% highlight ruby %}
 (1..5).to_a * ','
-</code>
+{% endhighlight %}
 
 Each time the same result:
 
-<code class="ruby">
+{% highlight ruby %}
 => "1,2,3,4,5"
-</code>
+{% endhighlight %}
 
 I never play videogames, but with programming languages in My free time, hope You enjoy reading.

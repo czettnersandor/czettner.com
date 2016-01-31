@@ -7,7 +7,7 @@ categories: [magento]
 ---
 Egy egyszerű blokk Magentohoz, ami az aktuális kategória alkategóriáit írja ki. Ha nincs, akkor a szülő alkategóriáit.
 
-<code class="php">
+{% highlight php %}
 <?php
 $_category = $this->getCurrentCategory();
 $collection = Mage::getModel('catalog/category')->getCategories($_category->entity_id);
@@ -46,4 +46,4 @@ if (!$collection->count()) {
         </div>
     </div>
 <?php endif; ?>
-</code>
+{% endhighlight %}

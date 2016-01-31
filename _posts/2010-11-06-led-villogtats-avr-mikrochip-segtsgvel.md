@@ -10,7 +10,7 @@ Maga az égető a hobbielektronika.hu leírása alapján és a tőlük vásárol
 
 Itt a led villogó forráskódja, ebből bármilyen komolyabb stuff elkezdhető:
 
-<code>
+{% highlight html %}
 #define F_CPU 10000000UL
 #include <avr/io.h>
 #include <util/delay.h>
@@ -33,11 +33,11 @@ int main(void) {
   return 0;
 }
 
-</code>
+{% endhighlight %}
 
 És a hozzá tartozó Makefile, benne a chip típusával, ami most attiny2313:
 
-<code>
+{% highlight html %}
 CC=avr-gcc
 CFLAGS=-g -Os -Wall -mcall-prologues -mmcu=$(AVRPART)
 AVRPART=attiny2313
@@ -56,6 +56,6 @@ program : $(TARGET).hex
 
 clean :
 	rm -f *.hex *.obj *.o
-</code>
+{% endhighlight %}
 
 A "make program" parancsot kiadva azonnal a chipre írja a programot, tápra kapcsolva pedig már villog is a led.

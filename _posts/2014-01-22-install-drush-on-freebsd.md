@@ -8,15 +8,15 @@ Drush is a widely used command line management tool for Drupal installations. It
 
 To install it on FreeBSD, follow these simple commands:
 
-<code>
+{% highlight html %}
 wget https://github.com/drush-ops/drush/archive/master.zip --no-check-certificate
 unzip master.zip -d /usr/local
 mv /usr/local/drush-master /usr/local/drush
 ln -s /usr/local/drush/drush /usr/local/bin/drush
-</code>
+{% endhighlight %}
 
 The required libraries will be downloaded at first run, so don't forget to run drush as root after you downloaded it:
 
-<code>
+{% highlight html %}
 drush
-</code>
+{% endhighlight %}
